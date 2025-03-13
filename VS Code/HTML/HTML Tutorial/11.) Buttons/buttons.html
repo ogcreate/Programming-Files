@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Button Tutorial</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        
+        <!--A button that links to page2.html-->
+        <a href="/11.) Buttons/page2.html" target="_blank">
+        <button style="font-size: 25px; background-color: rgb(155, 155, 155); color: blue; border-radius: 25px;">Click me</button>
+        </a>
+
+        <br>
+        <!--A paragraph with an id of greeting-->
+        <p id="greeting">hello</p>
+        
+        <!--A inline css with function script in-->
+        <button onclick="doSomething()" style="font-size: 25px; background-color: rgb(155, 155, 155); color: red; border-radius: 25px;">Do something</button>
+
+        <!--A script that changes the text of the paragraph with the id of greeting-->
+        <script>
+            function doSomething() {
+                if (document.getElementById("greeting").innerHTML == "Goodbye!") {
+                    document.getElementById("greeting").innerHTML = "Hello!";
+                } else {
+                document.getElementById("greeting").innerHTML = "Goodbye!";
+                }
+s            }
+        </script>
+
+    </body>
+</html>

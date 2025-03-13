@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Forms Tutorial</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        
+        <!-- POST is Used for Username or Password / anything with confidential stuff -->
+        <!-- GET is Used for Search Query / anything that is not confidential insensitive data -->
+        
+        <form action="index.php" method="post" enctype="multipart/form-data"> <!-- When we send data it will be brake into multiple parts and when compelte its reassembled  good for pictures-->
+
+            <!-- USERNAME-->
+            <label for="username">Username</label>
+            <input type="Text" id="username" minlength="6" maxlength="15" placeholder="username" required>
+
+            <!-- PASSWORD-->
+            <br>
+            <label for="password">Password</label> <!-- The id must label match the id attribute of input tag -->    
+            <input type="password" id="password" minlength="6" maxlength="25" placeholder="password" required>
+
+            <!-- EMAIL-->
+            <br>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="mail@email.com" required>
+
+            <!-- PHONE NUMBER-->
+            <br>
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="123-456-7890" pattern = "[0-9]{3}-[0-9]{3}-[0-9]{4}" required> <!-- pattern is used to validate the input and it must be the same-->
+
+            <!-- DATE-->
+            <br>
+            <label type="date">Date</label>
+            <input type="date" id="date" required>
+
+            <!-- NUMBER -->
+            <br>
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" placeholder="number" value="1" min="0"> <!-- min is used to set the minimum value to not reach negative numbers -->
+
+            <!-- RADIO BUTTONS -->
+            <br>
+            <label for="title">Title</label>
+            <input type="radio" id="mr" value="Mr." name="title"> <!-- name is used to group the radio buttons so we can only select one n not multiple -->
+                <label for="mr">Mr.</label>
+            <input type="radio" id="ms" value="Ms." name="title">
+                <label for="ms">Ms.</label>
+            <input type="radio" id="doc" value="PhD." name="title">
+                <label for="doc">PhD.</label>
+
+            <br>
+            <label for="subscribe">Subscribe</label>
+            <input type="checkbox" id="subscribe">
+
+            <!-- DROPDOWN -->
+            <br>
+            <label for="payment">Payment</label>
+            <select id="payment">
+                <option value="visa">Visa</option>
+                <option value="mastercard">Mastercard</option>
+                <option value="paypal">Paypal</option>
+                <option value="bitcoin">Bitcoin</option>
+            </select>
+
+            <!-- TEXTAREA -->
+            <br>
+            <label for="comment">Comment</label>
+            <textarea id="comment" rows="3" cols="25" placeholder="place comment here"></textarea>
+
+            <!-- FILE -->
+            <br>
+            <label for="file">File</label>
+            <input type="file" id="file" accept="image/*, audio/*">
+
+            <!-- SUBMIT BUTTON -->
+            <br>
+            <input type="reset">
+            <input type="submit">
+            
+        </form>
+
+    </body>
+</html>

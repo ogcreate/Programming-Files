@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Contact Form</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+
+    <header>
+        <h1>Contact Form</h1>
+    </header>
+
+    <form action="index.php" method="get">
+
+        <label for="uName">Username:</label>
+        <input type="text" id="uName" name="userName" required>
+        <br>
+        <label for="eMail">Email:</label>
+        <input type="email" id="eMail" name="userEmail" required>
+        <br>
+        <label for="msgs">Message:</label>
+        <textarea name="userMsg" id="msgs" placeholder="leave a messeage here." rows="4" required></textarea>
+
+        <hr>
+        <input type="submit">
+
+    </form>
+
+    </body>
+</html>
